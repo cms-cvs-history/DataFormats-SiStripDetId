@@ -3,5 +3,5 @@
 DEFINE_SEAL_MODULE();
 
 #include "DataFormats/SiStripDetId/test/stubs/SiStripAnalyzeKeys.h"
-DEFINE_ANOTHER_FWK_MODULE(SiStripAnalyzeKeys)
+DEFINE_ANOTHER_FWK_MODULE(SiStripAnalyzeKeys);
 
