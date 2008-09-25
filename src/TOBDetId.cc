@@ -10,7 +10,8 @@ TOBDetId::TOBDetId(const DetId& id) : SiStripDetId(id.rawId()) {
 bool TOBDetId::isDoubleSide() const {
   // Double Side: only layers 1 and 2
   if( this->glued() == 0 && ( this->layer() == 1 || this->layer() == 2 ) ) {
-    return true;
+//    return true;
+    return false;
   } else {
     return false;
   }
