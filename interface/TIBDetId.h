@@ -87,11 +87,11 @@ class TIBDetId : public SiStripDetId {
   /** Returns true if the module is in internal part of the layer (smaller radius) */
   bool isInternalString() const
   { return (string()[1] == 1);}
-  
+ 
   /** Returns true if the module is in external part of the layer (bigger radius) */
   bool isExternalString() const
   { return (!isInternalString());}
-  
+ 
   /** Returns true if the module is rphi */
   bool isRPhi()
   { return (stereo() == 0 && !isDoubleSide());}
@@ -101,12 +101,12 @@ class TIBDetId : public SiStripDetId {
   { return (stereo() != 0 && !isDoubleSide());}
   
   
-private:
+ private:
   /// two bits would be enough, but  we could use the number "0" as a wildcard
-  static const unsigned int layerStartBit_=           14;
-  static const unsigned int str_fw_bwStartBit_=       12;
-  static const unsigned int str_int_extStartBit_=     10;
-  static const unsigned int strStartBit_=             4;
+  static const unsigned int layerStartBit_=           18; // 14
+  static const unsigned int str_fw_bwStartBit_=       16; // 12
+  static const unsigned int str_int_extStartBit_=     14; // 10
+  static const unsigned int strStartBit_=             8;  //  4
   static const unsigned int moduleStartBit_=          2;
   static const unsigned int sterStartBit_=            0;
   /// two bits would be enough, but  we could use the number "0" as a wildcard
@@ -115,7 +115,7 @@ private:
   static const unsigned int str_fw_bwMask_=   0x3;
   static const unsigned int str_int_extMask_= 0x3;
   static const unsigned int strMask_=         0x3F;
-  static const unsigned int moduleMask_=      0x3;
+  static const unsigned int moduleMask_=      0x3F;  // 0x3
   static const unsigned int sterMask_=        0x3;
 };
 
