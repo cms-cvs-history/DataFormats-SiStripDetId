@@ -89,9 +89,9 @@ class TOBDetId : public SiStripDetId {
   
 private:
   /// two bits would be enough, but  we could use the number "0" as a wildcard
-  static const unsigned int layerStartBit_=     14;
-  static const unsigned int rod_fw_bwStartBit_= 12;
-  static const unsigned int rodStartBit_=       5;
+  static const unsigned int layerStartBit_=     17; // 14;
+  static const unsigned int rod_fw_bwStartBit_= 15; // 12;
+  static const unsigned int rodStartBit_=       8;  // 5;
   static const unsigned int moduleStartBit_=    2;
   static const unsigned int sterStartBit_=      0;
   /// two bits would be enough, but  we could use the number "0" as a wildcard
@@ -99,7 +99,7 @@ private:
   static const unsigned int layerMask_=       0x7;
   static const unsigned int rod_fw_bwMask_=   0x3;
   static const unsigned int rodMask_=         0x7F;
-  static const unsigned int moduleMask_=      0x7;
+  static const unsigned int moduleMask_=      0x3F; // 0x7;
   static const unsigned int sterMask_=        0x3;
 };
 
